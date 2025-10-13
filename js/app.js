@@ -1,39 +1,34 @@
-/* Ersätt/lägg till denna kod i din js/main.js */
 
-// VG-krav: Dynamisk interaktion med DOM
-const addItemButton = document.getElementById('addItemButton');
+
 const dynamicList = document.getElementById('dynamicList');
-let itemCounter = 2;
-
-// Nytt för Pokémon-temat: Interaktion med bilden
-const pokemonImage = document.getElementById('pokemonCardImage');
-
-// Lägg till en interaktivitet för bilden (Hovring/mus över)
-pokemonImage.addEventListener('mouseover', function() {
-  // Ändrar texten när musen hovrar över bilden
-  console.log("Musen är över kortet!");
-  pokemonImage.alt = "Charizard (Hovered)";
-});
-
-pokemonImage.addEventListener('mouseout', function() {
-  // Återställer texten när musen lämnar bilden
-  pokemonImage.alt = "Ett Charizard-kort";
-});
 
 
-// Händelselyssnare för knappen (Från Uppgift 1)
-addItemButton.addEventListener('click', function() {
+// Vi väljer alla element som har klassen "clickable-card"
+const clickableCards = document.querySelectorAll('.clickable-card');
+let logCounter = 2;
 
-  // VG-krav: Generera HTML-element från JavaScript
-  const newListItem = document.createElement('li');
-  const itemText = document.createTextNode(`Nytt kort loggat: ${new Date().toLocaleDateString()} kl ${new Date().toLocaleTimeString()}`);
+// Vi lägger till en klicklyssnare på varje enskilt kort i listan
+clickableCards.forEach(card => {
+  card.addEventListener('click', function(event) {
 
-  newListItem.appendChild(itemText);
+    // Här får vi kortets namn från alt-texten eller id.
+    // Genom att använda event.target vet vi exakt vilket kort som klickades på.
+    const cardName = event.target.alt;
 
-  // Modifiera element i DOM (lägger till nytt listobjekt)
-  dynamicList.appendChild(newListItem);
+    // 1. Skapa ett nytt <li> element
+    const newListItem = document.createElement('li');
 
-  itemCounter++;
+    // 2. Skapa textinnehållet
+    const itemText = document.createTextNode(`Kort lagt till: ${logCounter} ${cardName} - ${new Date().toLocaleTimeString()}`);
 
-  /* Förklaring av Kodflödet (VG-kravet) finns som kommentarer i din index.html-fil. */
+    // 3. Lägg till textinnehållet i <li> elementet
+    newListItem.appendChild(itemText);
+
+    // 4. Modifiera DOM (lägg till element)
+    dynamicList.appendChild(newListItem);
+
+    logCounter++;
+
+
+  });
 });

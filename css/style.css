@@ -92,3 +92,27 @@ footer {
   color: white;
   margin-top: 30px;
 }
+/* --- NY STIL FÖR TRE KLICKBARA KORT --- */
+
+.card-selection-container {
+  display: flex; /* Gör att korten läggs på rad */
+  justify-content: space-around; /* Sprider ut korten jämnt */
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.clickable-card {
+  width: 250px; /* Storlek på korten */
+  height: auto;
+  border: 5px solid #3b4cca;
+  border-radius: 10px;
+  cursor: pointer; /* Indikerar att elementet är klickbart */
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.clickable-card:hover {
+  transform: translateY(-5px) scale(1.05); /* Lyft upp kortet lite */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3); /* Ger en skugga */
+}
+
+/* Du kan ta bort stilen för #pokemonCardImage:hover om du vill */
