@@ -1,6 +1,3 @@
-/* Ersätt/lägg till denna kod i din css/main.css */
-
-/* --- GRUNDSTIL --- */
 body {
   font-family: 'Arial', sans-serif;
   line-height: 1.6;
@@ -15,7 +12,7 @@ header {
   color: #3b4cca; /* Pokémon Blå */
   padding: 30px 20px;
   text-align: center;
-  border-bottom: 5px solid #cc0000; /* Pokémon Röd kant */
+
 }
 
 h1 {
@@ -27,7 +24,7 @@ main {
   padding: 20px;
   max-width: 960px;
   margin: 20px auto;
-  background-color: white;
+  background-color: #e6f0ff; /* Ny Ljusblå Färg */
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
