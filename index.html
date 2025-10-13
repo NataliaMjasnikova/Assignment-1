@@ -1,33 +1,68 @@
 <!doctype html>
-<html class="no-js" lang="">
-
+<html class="no-js" lang="sv">
 <head>
   <meta charset="utf-8">
+  <title>GoGo4Pokemon - Din Kortdatabas</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title></title>
+
   <link rel="stylesheet" href="css/style.css">
-  <meta name="description" content="">
-
-  <meta property="og:title" content="">
-  <meta property="og:type" content="">
-  <meta property="og:url" content="">
-  <meta property="og:image" content="">
-  <meta property="og:image:alt" content="">
-
-  <link rel="icon" href="/favicon.ico" sizes="any">
-  <link rel="icon" href="/icon.svg" type="image/svg+xml">
-  <link rel="apple-touch-icon" href="icon.png">
-
-  <link rel="manifest" href="site.webmanifest">
-  <meta name="theme-color" content="#fafafa">
+  <link rel="icon" href="favicon.ico" sizes="any">
 </head>
-
 <body>
 
-  <!-- Add your site or application content here -->
-  <p>Hello world! This is HTML5 Boilerplate.</p>
-  <script src="js/app.js"></script>
+<header>
+  <h1>GoGo4Pokemon: Världen av Pokémon-kort</h1>
+  <p>Här utforskar vi de sällsynta korten och den dynamiska listan! Vi brinner för att erbjuda kort av hög kvalitet, nya och äldre exemplar, och ge guider och tips för både samlare och spelare.</p>
+</header>
 
+<main>
+
+  <section class="card-display">
+    <h2>Välj kort att logga i samlingen</h2>
+    <p>Klicka på ett kort nedan för att dynamiskt logga det i din kortlogg.</p>
+
+    <div class="card-selection-container">
+      <img id="card-pikachu"
+           class="clickable-card"
+           src="img/card_1.png"
+           alt="Pikachu Pokémon Kort">
+
+      <img id="card-bulbasaur"
+           class="clickable-card"
+           src="img/card_2.png"
+           alt="Bulbasaur Pokémon Kort">
+
+      <img id="card-squirtle"
+           class="clickable-card"
+           src="img/card_3.png"
+           alt="Squirtle Pokémon Kort">
+    </div>
+  </section>
+
+  <section class="dynamic-feature">
+    <h2>Dynamisk Kortlogg (Samling)</h2>
+    <p>Kort som du klickar på läggs till här:</p>
+    <ul id="dynamicList">
+      <li>Start: Ett kort har redan lagts till.</li>
+    </ul>
+  </section>
+
+  <section class="dynamic-feature">
+    <h2>Dynamisk Kortlogg (Uppgift 1-funktionalitet)</h2>
+    <p>Klicka för att logga att du har lagt till ett nytt kort i din samling.</p>
+
+    <button id="addItemButton">Lägg till nytt kort</button>
+    <ul id="dynamicList">
+      <li>Grundläggande kort (Redan i samlingen)</li>
+    </ul>
+  </section>
+
+</main>
+
+<footer>
+  <p>&copy; 2024 GoGo4Pokemon | Gjord för Uppgift 1</p>
+</footer>
+
+<script src="js/app.js"></script>
 </body>
-
 </html>
