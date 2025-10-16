@@ -21,7 +21,19 @@
     <h2>Välj kort att logga i samlingen</h2>
     <p>Klicka på ett kort nedan för att dynamiskt logga det i din kortlogg.</p>
 
+    <!--
+   Skapar en container för att lägga ut och gruppera bilderna.
+   Använder mig av tre stycken och lägger ut dem sida vid sida.
+
+   class="clickable-card" – ett element som JavaScript använder för att välja kort,
+   så att den vet vilka element den ska lägga en klicklyssnare på.
+
+   alt = kortnamn. Attribut som datakälla. När ett kort klickas kan JavaScript läsa av texten,
+   i det fallet kortnamn.
+   -->
+
     <div class="card-selection-container">
+
       <img id="card-pikachu"
            class="clickable-card"
            src="img/card_1.jpg"
